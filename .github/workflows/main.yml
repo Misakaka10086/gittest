@@ -16,5 +16,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /MisakaFiles/gittest/gittest
-            git pull origin master
+            cd /MisakaFiles/gittest
+            git pull
