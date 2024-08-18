@@ -25,5 +25,5 @@ jobs:
       run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker build -t githubactiontest . -f Dockerfile.txt"
 
     - name: Run docker image
-      run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker run -d githubactiontest"
+      run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker run -d -p 4001:4001 githubactiontest"
 
