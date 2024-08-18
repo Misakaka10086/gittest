@@ -22,8 +22,8 @@ jobs:
       run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && git pull"
 
 
-    # - name: Build Dcoker image
-    #   run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker build -t githubactiontest . -f Dockerfile.txt"
+    - name: Build Dcoker image
+      run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker build -t githubactiontest . -f Dockerfile.txt"
 
     # - name: Stop running Docker container
     #   run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "docker stop servetest || true"
