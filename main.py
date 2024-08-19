@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template('index.html', message='Hello World! What a brave new world this is!')
+    return render_template('index.html', message='Hello World!\r\nWhat a brave new world this is!')
 
 
 
