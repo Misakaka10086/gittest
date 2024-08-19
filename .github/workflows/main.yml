@@ -22,7 +22,7 @@ jobs:
       run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && git pull"
 
     - name: Delete Old Dcoker image
-      run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker rmi -f githubactiontest"
+      run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker rmi -f githubactiontest:latest"
 
     - name: Build Dcoker image
       run: ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /MisakaFiles/gittest && docker build -t githubactiontest . -f Dockerfile.txt"
